@@ -1,0 +1,23 @@
+https://retosdeprogramacion.com/roadmap --- Retos de programación (Inician desde lo más básico)
+
+https://edube.org/study/pt101 --- Cursos varios de programación (aquí vienen los cursos para certificarse)
+
+https://www.boot.dev/dashboard --- Cursos varios de programación en ingles (Recomendación iniciar con Learn to code in Python)
+
+https://leetcode.com/--- Ejercicios tipo entrevista (no recomendado para el principiantes, iniciar con ejercicios de dificultad fácil)
+
+https://docs.python.org/3.13/ --- Página oficial de python 
+
+https://chatgpt.com/ --- Usenlo con sabiduría 
+ 
+https://www.youtube.com/watch?v=Kp4Mvapo5kc&list=PLNdFk2_brsRdgQXLIlKBXQDeRf3qvXVU_  Mouredev Curso completo en youtube de python en español
+
+https://www.youtube.com/watch?v=QXeEoD0pB3E&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3  Telusko Curso completo en youtube de python en inglés 
+
+
+
+
+
+
+
+
