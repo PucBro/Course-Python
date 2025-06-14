@@ -9,7 +9,7 @@
 def ejercicio_01(texto1, texto2):
     impresiones = 0
     
-    for i in range(1,101):
+    for i in range(1, 101):
         if i%3 == 0 and i%5 == 0:
             print(f"{texto1} y {texto2}")
 
