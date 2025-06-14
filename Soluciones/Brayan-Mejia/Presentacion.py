@@ -1,5 +1,7 @@
 # Reto semanal (Sábado 14/Jun/25):
 
+# Prueba para hacer un Pull Request
+
 # Crea una función que reciba dos parámetros de tipo cadena de texto y retorne un número.
 #  * - La función imprime todos los números del 1 al 100. Teniendo en cuenta que:
 #  *   - Si el número es múltiplo de 3, muestra la cadena de texto del primer parámetro.
