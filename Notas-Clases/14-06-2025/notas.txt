@@ -1,0 +1,25 @@
+-python interpreta no compila
+-python no solo usa programación orientada a objetos
+
+tipos de variables en java:
+    primitivas:
+        enteros:
+            byte
+            short
+            int 
+            long
+        decimal:
+            float
+            double
+        char
+        Boolean
+    referencia:
+        string
+
+tipos de variables en python (básicos):
+    int
+    float 
+    String
+    Boolean
+
+
