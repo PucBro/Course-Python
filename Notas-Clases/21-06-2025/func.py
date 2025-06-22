@@ -32,6 +32,13 @@ volumen(3,3,3)
 for i in range(5,100, 10):
     if i == 5:
         continue # Se salta al siguiente
+    elif i == 15:
+        print("este es 15")
+    elif i == 25:
+        print("este es 15")
+    else:
+        print("no es igual a 5")
+    
     print(i)
 
 
@@ -54,10 +61,25 @@ while True:
 binario = 0b10
 print( f"101010 en binario es {0b1010101}")
 
-#101 -> 5 y 111 ->7
+#101 -> 5 y 111 ->7      010 -> 2**1=2     11=2**1 + 2**0 = 3
 
+#Operador bitwise
 
-print(5 & 5)# El operador and me da 001 en 3 & 5. Evalúa bit a bit la operación y da 1 si son el mismo y da 0 si uno de los dos es 0
+print(5 & 7)# El operador "and" me da 001 en 3 & 5. Evalúa bit a bit la operación y da 1 si son el mismo y da 0 si uno de los dos es 0
 
 print(5|7) # Operador or me da 1 si el uno de los bits evaluados es 1 y si los dos son 0 regresa 0
 
+print(5^2) #Operador XOR da 1 cuando los digitos son distintos y 0 cuando son iguales
+
+print(~5) # Esto da -(x+1)
+
+print(10 >> 2) # Recorre posiciones del bit hacia la derecha recorre los del primer número tantas veces como diga el número después de >> 2
+#(dividimos con división entera el número por 2**y donde y es el número que va después de << )
+
+print(10 << 2) # Recorre posiciones del bit hacia la izquierda (multiplicamos el número por 2**y donde y es el número que va después de << )
+
+# 10 = 8 +2 =2**3 + 2**1 -> 1010    101000
+
+
+#1 1 111 111 -> 2**8-1  = 255
+      
