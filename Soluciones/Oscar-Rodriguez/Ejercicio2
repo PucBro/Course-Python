@@ -1,0 +1,71 @@
+#Reto semanal 2:
+
+#Crea una función que, dado un número entero positivo, retorne la fecha correspondiente según el calendario gregoriano, asumiendo que el conteo inicia el 1 de enero del año 0001.
+
+#Importante: Toma en cuenta la regla de los años bisiestos:
+
+#Un año es bisiesto si es divisible por 4, excepto cuando es divisible por 100, a menos que también sea divisible por 400.
+
+#Ejemplo:
+#Si la función recibe 370, debe retornar: 05/01/0002.
+
+
+#Hint: 
+#Primero realicen una función para calcular el año en el que están 
+
+#Si es divisible entre 400 → es bisiesto. || Sino, si es divisible entre 100 → no es bisiesto. || Sino, si es divisible entre 4 → es bisiesto.
+
+def es_bisiesto(anio):
+    if anio % 400 == 0:
+        return True
+    elif anio % 100 == 0:
+        return False
+    elif anio % 4 == 0:
+        return True
+    else:
+        return False
+    
+def calcular_anio(dias_totales):
+    anio = 1
+    while True:
+        if es_bisiesto(anio):
+            dias_en_anio = 366
+        else:
+            dias_en_anio = 365
+
+        if dias_totales >= dias_en_anio:
+            dias_totales -=dias_en_anio
+            anio +=1
+        else:
+            break
+    return anio, dias_totales
+
+def calcular_mes_dia(dias_sobrantes,anio):
+    meses = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+    if es_bisiesto(anio):
+        meses[1] = 29
+    mes = 1
+    
+    for dias_mes in meses:
+        if dias_sobrantes < dias_mes:
+           
+            dia = dias_sobrantes + 1
+            break
+        else:
+           
+            dias_sobrantes -= dias_mes
+            mes += 1
+    
+    return dia, mes
+
+def obtener_fecha(dias_totales):
+    anio, dias_sobrantes = calcular_anio(dias_totales)
+    dia, mes = calcular_mes_dia(dias_sobrantes, anio)
+    
+   
+    fecha = f"{dia:02d}/{mes:02d}/{anio:04d}"
+    return fecha
+
+print(obtener_fecha(370))  # Esto debería imprimir: 05/01/0002
+
