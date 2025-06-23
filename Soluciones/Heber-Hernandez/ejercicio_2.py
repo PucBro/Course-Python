@@ -5,7 +5,8 @@ HEBER HERNANDEZ
 
 21/Jun/25
 
-Crea una función que, dado un número entero positivo, retorne la fecha correspondiente según el calendario gregoriano, asumiendo que el conteo inicia el 1 de enero del año 0001.
+Crea una función que, dado un número entero positivo, retorne la fecha correspondiente según el calendario gregoriano,
+ asumiendo que el conteo inicia el 1 de enero del año 0001.
 
 Importante: Toma en cuenta la regla de los años bisiestos:
 
@@ -17,15 +18,21 @@ Si la función recibe 370, debe retornar: 05/01/0002.
 """
 
 
-def format_date(days: int, month: int, year: int) -> str:
-    return f"{days:02d}/{month:02d}/{year:04d}"
+def format_date(day: int, month: int, year: int) -> str:
+    """ Formatea la fecha en el formato dd/mm/yyyy """
+
+    return f"{day:02d}/{month:02d}/{year:04d}"
 
 
 def leap_year(year: int) -> bool:
+    """Verifica si un año es bisiesto"""
+
     return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
 
 
 def get_year(days: int):
+    """ Calcula el año y los días restantes a partir de un número total de días """
+
     days_year = 365
 
     years_count = 1
@@ -43,6 +50,8 @@ def get_year(days: int):
 
 
 def get_month(days: int, year: int):
+    """Calcula el mes y el día a partir de los días restantes y el año."""
+
     days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
     if leap_year(year):
@@ -58,6 +67,8 @@ def get_month(days: int, year: int):
 
 
 def get_date(days:int) :
+    """ Calcula la fecha correspondiente a un número de días desde el 1 de enero del año 0001 """
+
     try:
         if days < 1:
             return "El número de días debe ser un entero positivo"
