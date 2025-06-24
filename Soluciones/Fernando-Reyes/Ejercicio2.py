@@ -14,10 +14,13 @@
 from datetime import date, timedelta
 
 def calcularFecha(dias):
-    fechaInicio = date(1,1,1)
-    nuevaFecha = fechaInicio + timedelta(dias - 1)
-    print(nuevaFecha)
+    if(dias < 0):
+        print("solo valores positivos")
+    else:
+        fechaInicio = date(1,1,1)
+        nuevaFecha = fechaInicio + timedelta(dias - 1)
+        print(nuevaFecha)
 
-calcularFecha(12345)    
+calcularFecha(370)    
   
         
