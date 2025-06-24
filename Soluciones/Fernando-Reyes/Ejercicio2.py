@@ -19,8 +19,8 @@ def calcularFecha(dias):
     else:
         fechaInicio = date(1,1,1)
         nuevaFecha = fechaInicio + timedelta(dias - 1)
-        print(nuevaFecha)
+    return nuevaFecha
 
-calcularFecha(370)    
+print(calcularFecha(370))  
   
         
