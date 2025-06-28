@@ -1,0 +1,17 @@
+Instrucción del ejercicio
+
+Implementa dos funciones en Python que conviertan números entre el sistema decimal y el sistema de numeración romana.
+
+    intToRoman(num: int) -> str
+    Convierte un número entero positivo en su representación con números romanos.
+
+    romanToInt(s: str) -> int
+    Convierte una cadena con un número romano válido en su equivalente decimal.
+
+Restricciones
+
+    Solo se aceptan números enteros positivos en el rango de 1 a 3999.
+
+    Puedes asumir que las cadenas romanas de entrada siempre son válidas (siguen la notación romana estándar).
+
+    No es necesario manejar números menores a 1 o mayores a 3999.
