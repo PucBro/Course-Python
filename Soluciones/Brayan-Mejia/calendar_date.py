@@ -14,11 +14,11 @@ Hint: Primero realicen una función para calcular el año en el que están
 """
 
 def is_leap_year(year: int) -> bool:
-    return year%4 == 0 and year%100 != 0 or year%400 == 0
+    return year%4 == 0 and (year%100 != 0 or year%400 == 0)
 
 def calculate_year_and_remaining_days(days: int) -> tuple[int, int]:
-    days_common_year = 365
-    days_leap_year = 366
+    days_common_year = 365 #normal
+    days_leap_year = 366 #bisiesto
 
     year_days = 0
     year = 1
@@ -90,3 +90,5 @@ assert calendar_date(365 + 365 + 365 + 31 + 29) == "29/02/0004", "Error: A leap 
 
 assert calendar_date(370) == "05/01/0002", "Error: Task"
 
+
+print(calendar_date(42773))

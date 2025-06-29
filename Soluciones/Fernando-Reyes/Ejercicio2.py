@@ -21,6 +21,6 @@ def calcularFecha(dias):
         nuevaFecha = fechaInicio + timedelta(dias - 1)
     return nuevaFecha
 
-print(calcularFecha(370))  
+print(calcularFecha(42773))  
   
         
