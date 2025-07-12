@@ -17,6 +17,7 @@ def values(a,b):
         elif i % 5 == 0:
             print(b)
         else:
+            print(i)
             count +=1
     return count
 numbers = values("a","b")
