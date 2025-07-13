@@ -29,4 +29,15 @@ def func():
 
 
 while counter > -2:
+    lista1= ["manzana"]
+
+    if lista1: #No me evalúa el if si lista 1 es  vacía
+        print("hola")
+    else:
+        print("adios")
+        break
     print(func())
+
+
+#Python considera como falso, el False, valores iguales cero, variables que son None, listas, conjuntos, 
+# diccionarios, tupla vacías 
