@@ -42,7 +42,7 @@ def roman_to_numeric(): # Función para convertir romano a decimal
             nextValue=dicRomanValue[next] #Ontebemos el valor de la siguiente letra
 
             if(letterValue>=nextValue):
-                decimalNumber+=letterValue # Si  el valor de la letra actual el  mayor a la  siguiente sumamos al resultado
+                decimalNumber+=letterValue # Si  el valor de la letra actual es  mayor a la  siguiente sumamos al resultado
             else:decimalNumber-=letterValue # si es menor restamos al resultado
 
         else:decimalNumber+=letterValue # Si estamos en el último valor, siempre lo sumamos
@@ -75,7 +75,7 @@ def numeric_to_Roman():
 # Dentro de un While me faltó
 
 
-
+2
 
 # Match para hacer la función de un switch en java, en python no existe switch
 print("Select one option")
