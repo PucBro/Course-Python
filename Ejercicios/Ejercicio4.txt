@@ -1,0 +1,104 @@
+“El Libro de Aventuras” 🐉
+Objetivo:
+
+Desarrollar una aplicación de consola en Python donde puedas gestionar una colección de misiones asignadas a diferentes aventureros. Cada misión contiene una lista de eventos y el sistema debe permitir crear, visualizar, modificar y copiar misiones entre aventureros.
+Funcionalidades requeridas
+🔸 1. Crear nueva misión
+
+    Solicita el nombre del aventurero. Si no existe, créalo.
+
+    Solicita el nombre de la misión.
+
+    Permite ingresar eventos uno por uno hasta que el usuario escriba una palabra clave como "fin".
+
+    Guarda la misión bajo el nombre del aventurero.
+
+    Considera que cada aventurero puede tener múltiples misiones.
+
+🔸 2. Ver misiones
+
+    Solicita el nombre del aventurero.
+
+    Muestra las misiones disponibles para ese aventurero (por nombre).
+
+    Permite seleccionar una misión y ver su lista de eventos.
+
+🔸 3. Modificar misiones
+
+    Solicita el nombre del aventurero.
+
+    Permite seleccionar una de sus misiones.
+
+    Muestra un submenú con opciones para modificar esa misión:
+
+        Cambiar el orden de dos eventos
+
+        Renombrar un evento
+
+        Eliminar un evento
+
+        Agregar un nuevo evento
+
+        Volver al menú anterior
+
+    Aplica los cambios directamente sobre la lista de eventos de la misión seleccionada.
+
+🔸 4. Copiar misiones entre aventureros
+
+    Solicita el nombre del aventurero origen y del aventurero destino.
+
+        Si el destino no existe, créalo.
+
+    Muestra todas las misiones del aventurero origen numeradas.
+
+    Solicita al usuario un rango de misiones a copiar (por ejemplo, de la misión 2 a la 4).
+
+    Copia las misiones dentro de ese rango y las agrega al aventurero destino.
+
+        Las misiones copiadas pueden renombrarse automáticamente (por ejemplo, agregando “(copia)”).
+
+    Si el rango es inválido o hay errores, debe mostrar mensajes claros y seguir funcionando.
+
+🔸 5. Salir
+
+    Muestra un mensaje de despedida como:
+
+        “ Guardando el libro... ¡Hasta la próxima, maestro cronista!”
+
+ Consideraciones técnicas
+
+    Usa diccionarios para organizar los aventureros y sus misiones:
+
+    {
+      "Lucía": {
+        "Invasión Zombi": ["Buscar armas", "Proteger al pueblo"]
+      },
+      "Carlos": {
+        "Rescate del dragón": ["Cruzar bosque", "Derrotar ogro"]
+      }
+    }
+
+    Usa listas para representar los eventos de cada misión.
+
+    Usa slices para copiar rangos de misiones.
+
+    Implementa manejo de excepciones donde sea necesario:
+
+        Aventureros o misiones inexistentes
+
+        Rango de copia inválido
+
+        Entradas no numéricas
+
+        Índices fuera de rango
+
+
+💡 Recomendaciones adicionales (opcionales)
+
+    Siempre permite volver al menú anterior excepto al salir.
+
+    Usa funciones separadas para cada funcionalidad.
+
+    El código debe de estar estructurado en distintos módulos por cada funcionalidad
+
+    Si deseas hacerlo más visual o divertido, puedes agregar emojis en los menús.

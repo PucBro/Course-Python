@@ -95,14 +95,24 @@ Más importantes:
 
 """
 
-
 from math import *
 
-print(log(8))
+def func():
+    print(log(8))
 
-print(log(8,2))
+    print(log(8,2))
 
-print(trunc(-3.99))
-print(floor(-3.99))
+    print(trunc(-3.99))
+    print(floor(-3.99))
 
-print(factorial(5))
+    print(factorial(5))
+
+
+    print(__name__)
+
+def func2(name:str):
+    print(name)
+
+if __name__=="modules":
+    func()
+    func2("hola")
