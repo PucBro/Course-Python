@@ -1,8 +1,10 @@
-“El Libro de Aventuras” 🐉
+“El Libro de Aventuras” 
 Objetivo:
 
-Desarrollar una aplicación de consola en Python donde puedas gestionar una colección de misiones asignadas a diferentes aventureros. Cada misión contiene una lista de eventos y el sistema debe permitir crear, visualizar, modificar y copiar misiones entre aventureros.
+Desarrollar una aplicación de consola en Python donde puedas gestionar una colección de misiones asignadas a diferentes aventureros. 
+Cada misión contiene una lista de eventos y el sistema debe permitir crear, visualizar, modificar y copiar misiones entre aventureros.
 Funcionalidades requeridas
+
 🔸 1. Crear nueva misión
 
     Solicita el nombre del aventurero. Si no existe, créalo.
@@ -51,11 +53,11 @@ Funcionalidades requeridas
 
     Muestra todas las misiones del aventurero origen numeradas.
 
-    Solicita al usuario un rango de misiones a copiar (por ejemplo, de la misión 2 a la 4).
+    Solicita al usuario que ingrese la misión que quiere copiar.
 
-    Copia las misiones dentro de ese rango y las agrega al aventurero destino.
+    Pidele al usuario un rango de los eventos de la misión que quiere copiar (por ejemplo del evento 1 al 3)
 
-        Las misiones copiadas pueden renombrarse automáticamente (por ejemplo, agregando “(copia)”).
+    Copia la misión con únicamente los eventos dentro de ese rango y las agrega al aventurero destino.
 
     Si el rango es inválido o hay errores, debe mostrar mensajes claros y seguir funcionando.
 
@@ -71,7 +73,8 @@ Funcionalidades requeridas
 
     {
       "Lucía": {
-        "Invasión Zombi": ["Buscar armas", "Proteger al pueblo"]
+        "Invasión Zombi": ["Buscar armas", "Proteger al pueblo"],
+        "Matar al Jefe":["Mata al Zombi jefe"]
       },
       "Carlos": {
         "Rescate del dragón": ["Cruzar bosque", "Derrotar ogro"]
@@ -80,7 +83,7 @@ Funcionalidades requeridas
 
     Usa listas para representar los eventos de cada misión.
 
-    Usa slices para copiar rangos de misiones.
+    Usa slices para copiar rangos de eventos de misiones.
 
     Implementa manejo de excepciones donde sea necesario:
 
@@ -93,7 +96,7 @@ Funcionalidades requeridas
         Índices fuera de rango
 
 
-💡 Recomendaciones adicionales (opcionales)
+   Recomendaciones adicionales 
 
     Siempre permite volver al menú anterior excepto al salir.
 
@@ -101,4 +104,4 @@ Funcionalidades requeridas
 
     El código debe de estar estructurado en distintos módulos por cada funcionalidad
 
-    Si deseas hacerlo más visual o divertido, puedes agregar emojis en los menús.
+    Si deseas hacerlo más visual o divertido, puedes agregar emojis en los menús (opcional).
