@@ -1,0 +1,23 @@
+
+0. Módulo control de las variables, en este caso creo sólo será una variable, osea un diccionario
+
+
+
+
+
+
+1.  menú princial
+
+		ver_menu:TRue
+		while ver_menu
+			print
+				1. Crear aventureros
+				2. Crear una misión
+				3. Visualizar una misión
+				4. Modificar una mision
+				5. Copiar misiones entre aventureros
+				6. Salir
+				
+				
+2. Estructura
+				
