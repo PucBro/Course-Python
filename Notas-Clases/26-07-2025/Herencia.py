@@ -14,6 +14,10 @@ class Hierba:
     @classmethod  
     def get_debilidad(cls):
         return cls.__debilidad 
+
+    @staticmethod
+    def static_method(nombre):
+        return "static_method"
     
     def get____var(self):
         return self.__var
@@ -90,6 +94,11 @@ print(Hierba._var)
 
 print(fuegohierba.get____var())
 
-print(fuegohierba.__var)
+#print(fuegohierba.__var)
+
+print(hierbaFuego.static_method())
+
+print(Hierba.static_method("hola"))
+
 
 
