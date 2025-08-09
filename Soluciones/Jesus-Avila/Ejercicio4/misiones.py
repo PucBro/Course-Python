@@ -57,9 +57,8 @@ def ver_misiones_completas():
         print(f"{i}. 🗺️ Misión: {mision['nombre']}")
         if mision['eventos']:
             for j, evento in enumerate(mision['eventos'], 1):
-                print(f"   {j}. 📍 {evento}")
+                print(f"   {j}.{evento}")
         else:
             print("⚠️ Esta misión no tiene eventos.")
         print("-" * 40) #Separador de misiones
-        
-        
+
