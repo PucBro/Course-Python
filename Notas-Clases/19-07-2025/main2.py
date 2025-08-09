@@ -37,5 +37,7 @@ print(random.uniform(5, 10))# float entre 5 y 10
 
 #random.choice(range(1,10,3))  Lo mismo que randrange
 
-print(random.sample([1,2,10,20,15], 3))
+print(random.sample([1,2,10,20,15], 3)) # saca una sublista aleatoria de 3 elementos de nuestra lista original
+
+
 
