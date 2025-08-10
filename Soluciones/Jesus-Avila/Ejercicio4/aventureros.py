@@ -19,6 +19,23 @@ def listar_aventureros():
         for i,nombre in enumerate(aventureros,1):
             print(f"{i}.{nombre}")
             
+            if nombre in aventurero_misiones and aventurero_misiones[nombre]:
+                for j, mision in enumerate(aventurero_misiones[nombre], 1):
+                    print(f"   {j}. 🗺️ {mision['nombre']}")
+                    if mision['eventos']:
+                        for k, evento in enumerate(mision['eventos'], 1):
+                            print(f"      {k}. 📍 {evento}")
+                    else:
+                        print("Sin eventos")
+            else:
+                print("Sin misiones asignadas")
+            
+            
+            
+            
+            
+            
+            
             
 def asignar_mision_a_aventurero():
      if not aventureros: #Revisa si el diccionario de aventureros está vacío.
@@ -50,7 +67,6 @@ def asignar_mision_a_aventurero():
          print(f"{"nombre_aven"} ya cuenta con la misión '{mision_select['nombre']}'")
          return
          
-         
      copiar_mision={
      "nombre":mision_select["nombre"],
      "eventos":list(mision_select["eventos"])
@@ -60,5 +76,3 @@ def asignar_mision_a_aventurero():
      
      print(f" Misión '{mision_select['nombre']}' asignada a {nombre_aven}")
           
-         
-    
