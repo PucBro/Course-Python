@@ -48,6 +48,7 @@ pedro = Humano("Pedro", 40, ["Juanito", "Roberto", "mengano"])
 print(diego != pedro )
 
 print(repr(diego))
+
 print(pedro)
 
 #child, child2 = next(pedro)
