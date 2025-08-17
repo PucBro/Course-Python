@@ -19,5 +19,22 @@
 				6. Salir
 				
 				
-2. Estructura
+2. Estructura de la variable global, debe ser un diccionario
+				
+				aventureros=[]
+				
+				
+				
+				
+				
+				
+				
+				
+				libro_de_aventuras={
+					"nombre_aventurero_1":
+				
+				
+				
+				}
+	
 				

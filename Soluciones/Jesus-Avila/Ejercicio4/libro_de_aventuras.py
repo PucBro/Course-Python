@@ -1,7 +1,7 @@
 
 # Imports de diferentes módulos metodos en especifico
-from aventureros import crear_aventurero,listar_aventureros
-from misiones import crear_mision,ver_misiones_completas
+from aventureros import crear_aventurero,listar_aventureros,asignar_mision_a_aventurero
+from misiones import crear_mision,ver_misiones_completas,modificar_misiones
 
 
 
@@ -17,8 +17,7 @@ def menu():
         print("4.Mostrar misiones\U0001f440")
         print("5.Modificar Misiones\u270F\uFE0F")
         print("6.Asignar Misiones a Aventureros") #Me falta ícono
-        print("7.Copiar Misiones\U0001f4dd")
-        print("8.Salir\U0001f3c3\u200D\u2642\uFE0F")
+        print("7.Salir\U0001f3c3\u200D\u2642\uFE0F")
         opcion=input() #input regresa un string
         match opcion:
              case "1":
@@ -37,15 +36,14 @@ def menu():
                  print("\nViendo misiones")
                  ver_misiones_completas()
              case "5":
-                 #método del modulo para modificar funciones
+                 #método del modulo para modificar misiones
                  print("\nModificando misiones")
+                 modificar_misiones()
              case "6":
                  #metodo para asignar misiones a aventureros
                  print("\nAsignando misiones")
-             case "7":    
-                 # Metodo del modulo para copiar funciones
-                 print("\nCopiando misiones")
-             case "8":
+                 asignar_mision_a_aventurero()
+             case "7":
                  print("\nSaliendo")
                  break #para romper el while, y salir del programa
              case _:
