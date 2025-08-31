@@ -133,6 +133,7 @@ celerybeat.pid
 env/
 venv/
 ENV/
+Notas-Clases/31-08-2025/scrapper
 env.bak/
 venv.bak/
 
@@ -178,7 +179,6 @@ cython_debug/
 #  that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
 #  and can be added to the global gitignore or merged into this file. However, if you prefer, 
 #  you could uncomment the following to ignore the enitre vscode folder
-# .vscode/
 
 # Ruff stuff:
 .ruff_cache/
@@ -195,3 +195,6 @@ cython_debug/
 
 #MAC
 .DS_Store
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
