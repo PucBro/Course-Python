@@ -133,6 +133,7 @@ celerybeat.pid
 env/
 venv/
 ENV/
+Notas-Clases/31-08-2025/scrapper
 env.bak/
 venv.bak/
 

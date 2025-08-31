@@ -1,4 +1,6 @@
-from variables_globales import misiones
+from variables_globales import misiones, aventurero_misiones
+
+
 
 '''
 def crear_mision():
@@ -17,6 +19,10 @@ def crear_mision():
     nombre = input("Nombre de la misión: ").strip().upper()
 
     # Verificar si ya existe una misión con ese nombre
+    nombres_existentes = set()
+    for m in misiones:
+        nombres_existentes.add(m["nombre"])
+
     nombres_existentes = {m["nombre"] for m in misiones} # es un set, trabaja como si fuera un for reducido como resultado varoles no duplicados
     if nombre in nombres_existentes:
         print(f"\nLa misión '{nombre}' ya existe.")
@@ -73,7 +79,7 @@ def modificar_misiones():
         print(f"{i}.{mision['nombre']}")
         
     idx=int(input("\n Selecciona el número de una mision: "))-1
-    mision_selec=misiones[idx_mision]
+    mision_selec=misiones[idx]
     
     print(f"\n Misión seleccionada: {mision_selec['nombre']}\n")
     print("1. Modificar misión")
@@ -87,36 +93,36 @@ def modificar_misiones():
             nuevo_nombre = input("Nuevo nombre de la misión (Enter para no cambiar): ").strip().upper()
             if nuevo_nombre:
                 # Cambiar en misiones globales el nuevo nombre de la mision
-                mision_sel['nombre'] = nuevo_nombre
+                mision_selec['nombre'] = nuevo_nombre
                 # Cambiar también en las misiones asignadas a aventureros si es que ya se las había asignado
                 for misiones_aven in aventurero_misiones.values():
                     for m in misiones_aven:
-                        if m['nombre'] == mision_sel['nombre']:
+                        if m['nombre'] == mision_selec['nombre']:
                             m['nombre'] = nuevo_nombre
                 print("✅ Nombre modificado.")
 
             # Modificar eventos
             print("\nEventos actuales:")
-            for i, e in enumerate(mision_sel['eventos'], 1):
+            for i, e in enumerate(mision_selec['eventos'], 1):
                 print(f"{i}. {e}")
                 
-            if input("¿Quieres agregar un nuevo evento? (s/n): ").lower() == "s": #si ingresa n se sale del if
+            if input("¿Quieres agregar un nuevo evento? (s/n): ").strip().lower() == "s": #si ingresa n se sale del if
                 nuevo_evento = input("Nombre del nuevo evento: ").strip()
-                mision_sel['eventos'].append(nuevo_evento)
+                mision_selec['eventos'].append(nuevo_evento)
                 # También agregarlo a los aventureros que tengan esta misión
                 for misiones_av in aventurero_misiones.values():
                     for m in misiones_av:
-                        if m['nombre'] == mision_sel['nombre']:
+                        if m['nombre'] == mision_selec['nombre']:
                             m['eventos'].append(nuevo_evento)
                 print("✅ Evento agregado.")
 
        case "2":
             # Eliminar mision de variable global de misiones, para que ya no aparezca
-            misiones.remove(mision_sel)
+            misiones.remove(mision_selec)
             # Eliminar de todos los aventureros que hasta el momento tengan esa mision
             for misiones_av in aventurero_misiones.values():
-                misiones_av[:] = [m for m in misiones_av if m['nombre'] != mision_sel['nombre']]
-            print(f"✅ Misión '{mision_sel['nombre']}' eliminada de la lista y de todos los aventureros.")
+                misiones_av[:] = [m for m in misiones_av if m['nombre'] != mision_selec['nombre']]
+            print(f"✅ Misión '{mision_selec['nombre']}' eliminada de la lista y de todos los aventureros.")
 
        case "3":
             print("Cancelado.")

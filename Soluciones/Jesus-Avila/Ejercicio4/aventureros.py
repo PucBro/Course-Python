@@ -1,9 +1,9 @@
 from variables_globales import aventureros,misiones,aventurero_misiones
 
 def crear_aventurero():
-    nombre = input("Nombre del aventurero: ").strip()
-    if nombre.upper() not in aventureros:
-        aventureros.append(nombre.upper())
+    nombre = input("Nombre del aventurero: ").strip().upper()
+    if nombre not in aventureros:
+        aventureros.append(nombre)
         print(f"Se ha creado el aventurero {nombre}.")
         print(f"\n La nueva lista de aventureros es:\n")
         for i,nombre in enumerate(aventureros,1):
@@ -64,7 +64,7 @@ def asignar_mision_a_aventurero():
      
      nombres_misiones_aven={m['nombre'] for m in aventurero_misiones[nombre_aven]}
      if mision_select["nombre"] in nombres_misiones_aven:
-         print(f"{"nombre_aven"} ya cuenta con la misión '{mision_select['nombre']}'")
+         print(f"{nombre_aven} ya cuenta con la misión '{mision_select['nombre']}'")
          return
          
      copiar_mision={
@@ -76,3 +76,4 @@ def asignar_mision_a_aventurero():
      
      print(f" Misión '{mision_select['nombre']}' asignada a {nombre_aven}")
           
+
